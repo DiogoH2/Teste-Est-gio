@@ -1,0 +1,54 @@
+body{
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+.containerRegistro{
+    margin-top: 100px;
+    background-color: black;
+    border-style: solid;
+    border-color: teal;
+    border-width: 2px;
+    width: 400px;
+    position: absolute;
+}
+
+
+.titulo{
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: fantasy;
+    text-shadow: 2px 2px teal;
+    color: black;
+}
+h1{
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: fantasy;
+    text-shadow: 2px 2px teal;
+    color: whitesmoke;
+}
+
+h2{
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: fantasy;
+    text-shadow: 2px 2px teal;
+    color: black;
+}
+
+
+.infoLivro{
+    font-size: 15px;
+    font-family: fantasy;
+    color: black;
+}
+.livros-get{
+    margin-top: 10px;
+}
+p{
+    font-size: 18px;
+    font-family: fantasy;
+    color: whitesmoke;
+}
+
