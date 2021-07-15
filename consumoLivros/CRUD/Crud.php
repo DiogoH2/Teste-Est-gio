@@ -2,9 +2,11 @@
     include('Classes/Class.Conexao.php');
     include('Classes/Class.Crud.php');
 
+    Error_reporting (0);
 //Função para ler os livros
 
-$codigo = $_GET['idLivro'];
+    $codigo = $_GET['idLivro'];
+
 
 
       function read(&$codigo){
@@ -46,10 +48,49 @@ function editarLivro(){
     $tipo = (isset($_POST['tipoAtt'])) ? $_POST['tipoAtt'] : '';
 
 
+    if(is_numeric($titulo)){
+        http_response_code(406);
+        echo "<script>alert('Coloque um titulo valido');</script>";
+        echo "<script>window.location = '../Pages/index.php'</script>";
+        exit;
+    }
+
+    if(is_numeric($autor)){
+        http_response_code(406);
+        echo "<script>alert('Coloque um autor valido');</script>";
+        echo "<script>window.location = '../Pages/index.php'</script>";
+        exit;
+    }
+
+    if(is_numeric($sinopse)){
+        http_response_code(406);
+        echo "<script>alert('Coloque uma sinopse valida');</script>";
+        echo "<script>window.location = '../Pages/index.php'</script>";
+        exit;
+    }
+
+    if(!is_numeric($tipo)){
+        http_response_code(406);
+        echo "<script>alert('Coloque um codigo valido');</script>";
+        echo "<script>window.location = '../Pages/index.php'</script>";
+        exit;
+    }
+
 
 
     Crud::setTabela('livros');
-    Crud::update(['titulo' => $titulo, 'autor' => $autor, 'sinopse' => $sinopse, 'ISBN'=> $ISBN, 'tipo'=> $tipo],['id' => $id]);
+    $pegaLivro =  Crud::select('SELECT * FROM livros WHERE titulo = :titulo', ['titulo' => $titulo], true);
+
+    if(!$pegaLivro){
+
+         Crud::update(['titulo' => $titulo, 'autor' => $autor, 'sinopse' => $sinopse, 'ISBN'=> $ISBN, 'tipo'=> $tipo],['id' => $id]);
+         header('location: ../Pages/index.php');
+    }
+ else{
+    echo "<script>alert('Nome já cadastrado!!');</script>";
+    echo "<script>window.location = '../Pages/index.php'</script>";
+    exit;
+ }
 
     
    header('location: ../Pages/index.php');

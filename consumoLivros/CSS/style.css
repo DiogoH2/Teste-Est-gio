@@ -9,7 +9,7 @@ body{
     border-style: solid;
     border-color: teal;
     border-width: 2px;
-    width: 400px;
+    width: 500px;
     position: absolute;
 }
 
@@ -21,6 +21,7 @@ body{
     text-shadow: 2px 2px teal;
     color: black;
 }
+
 h1{
     margin-top: 10px;
     font-size: 25px;
