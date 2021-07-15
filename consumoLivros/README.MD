@@ -11,11 +11,17 @@
 <b>--Após isso crie um banco de dados em seu phpMyAdmin com um tabela chamada livros com os devidos dados: </b>
 
 <i> -Código do Livro(id)-(INT).</i>
+
 <i> -Título.-(VARCHAR)</i>
+
 <i> -Autor.-(VARCHAR)</i>
+
 <i> -Sinopse.-(VARCHAR)</i>
+
 <i> -Tipo(Capa dura ou capa cartonada).-(INT)</i>
+
 <i> -Código do ISBN.-(VARCHAR)</i>
+
 <i> -FOTO.-(VARCHAR)</i>
 
 <h2>Como Usar: </h2>

@@ -18,7 +18,7 @@
     <article class="row">    
                                 
                         <div class="containerRegistro d-flex align-items-center justify-content-around offset-2">
-                            <form class="d-flex align-items-center justify-content-center flex-column" action="../CRUD/Crud.php" method="POST" enctype="multipart/form-data">
+                            <form class="d-flex align-items-center justify-content-center flex-column" action="../CRUD/CriaLivro.php" method="POST" enctype="multipart/form-data">
                                 <div>
                                     <h1>Registrar Livros</h1>
                                 </div>
@@ -93,6 +93,7 @@
 
                                     <div >
                                         <button class="btn btn-dark" type='submit' name='editarLivro'>Editar Livro</button>
+
                                         <button class="btn btn-dark" type='submit' name='excluirLivro'> Excluir livro</button>
                                     </div>
                                 </div>

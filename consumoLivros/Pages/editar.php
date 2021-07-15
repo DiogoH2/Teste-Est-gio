@@ -1,6 +1,6 @@
 <?php
 
-include('../CRUD/LerLivros.php');
+include('../CRUD/Crud.php');
 
 
 ?>
@@ -30,7 +30,7 @@ include('../CRUD/LerLivros.php');
                         </button>
 
                         <!-- Modal -->
-                        <form action="../CRUD/LerLivros.php" method="POST" enctype="multipart/form-data">
+                        <form action="../CRUD/Crud.php" method="POST" enctype="multipart/form-data">
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
@@ -51,7 +51,7 @@ include('../CRUD/LerLivros.php');
                           </div>
                       </div>
                         </form>                        
-                <form class="d-flex align-items-center justify-content-center flex-column" action="../CRUD/LerLivros.php" method="POST" enctype="multipart/form-data">
+                <form class="d-flex align-items-center justify-content-center flex-column" action="../CRUD/Crud.php" method="POST" enctype="multipart/form-data">
                         <input class="form-control" type="hidden" name="idLivro" id="idLivro" value="<?php echo $registros['id'] ?>">
                         <br>
 
